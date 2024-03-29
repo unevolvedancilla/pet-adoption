@@ -43,8 +43,6 @@ body {
 
 }
 
-
-
 .intro-text {
 	font-size: 1.25rem;
 	line-height: 169.3%;
@@ -70,8 +68,8 @@ body {
 }
 
 .our-btn:hover {
-	background-color: #3546E4;
-	border: 2px solid #3546E4;
+	background-color: #222c82;
+	border: 2px solid #222c82;
 }
 
 .our-btn--outline {
