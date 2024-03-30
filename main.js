@@ -1,5 +1,5 @@
 const template = document.querySelector("#pet-card-template")
-const wrapper = document.createDocumentFragment()
+const wrapper = document.createDocumentFragment() //create new  document fragment
 
 async function start() {
   const weatherPromise = await fetch("https://api.weather.gov/gridpoints//MFL/110,50/forecast")
@@ -18,6 +18,7 @@ async function petsarea() {
     clone.querySelector("h3").textContent = pet.name
     clone.querySelector(".pet-description").textContent = pet.description
     clone.querySelector(".pet-age").textContent = createAgeText(pet.birthYear)
+    if (!pet.photo) pet.photo = "images/fallback.jpg"
     clone.querySelector(".pet-card-photo img").src = pet.photo
     clone.querySelector(".pet-card-photo img").alt = `A ${pet.species} named ${pet.name}`
     wrapper.appendChild(clone) //add the pet card HTML to document fragment
